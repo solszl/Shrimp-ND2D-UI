@@ -1,5 +1,8 @@
 package com.shrimp.nd2d.assets
 {
+	import com.shrimp.framework.managers.AssetsManager;
+	import com.shrimp.nd2d.constant.AssetType;
+
 	/**
 	 * 
 	 * @author Sol
