@@ -6,6 +6,7 @@
     <classEntry path="com.shrimp.nd2d.ui.core.GloableConfig"/>
     <classEntry path="com.shrimp.nd2d.ui.controls.Image"/>
     <classEntry path="com.shrimp.nd2d.ClassUtils"/>
+    <classEntry path="com.shrimp.nd2d.text.BitmapFont2dPool"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
