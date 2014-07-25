@@ -4,6 +4,7 @@ package com.shrimp.nd2d.ui.core
 	import com.shrimp.nd2d.constant.AssetType;
 	
 	import de.nulldesign.nd2d.display.Node2D;
+	import de.nulldesign.nd2d.display.Sprite2D;
 	import de.nulldesign.nd2d.materials.texture.Texture2D;
 	
 	import flash.geom.Point;
@@ -14,7 +15,7 @@ package com.shrimp.nd2d.ui.core
 	 * @author Sol
 	 *
 	 */
-	public class Component extends Node2D
+	public class Component extends Sprite2D
 	{
 		/**	监听列表*/
 		protected var _listeners:Array;

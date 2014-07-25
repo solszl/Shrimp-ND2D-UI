@@ -2,11 +2,11 @@
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
     <classEntry path="com.shrimp.nd2d.ui.core.Component"/>
-    <classEntry path="com.shrimp.nd2d.ui.controls.Button"/>
     <classEntry path="com.shrimp.nd2d.ui.core.GloableConfig"/>
     <classEntry path="com.shrimp.nd2d.ui.controls.Image"/>
     <classEntry path="com.shrimp.nd2d.ClassUtils"/>
     <classEntry path="com.shrimp.nd2d.text.BitmapFont2dPool"/>
+    <classEntry path="com.shrimp.nd2d.ui.controls.Button"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
