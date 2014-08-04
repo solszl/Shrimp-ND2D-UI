@@ -1,4 +1,4 @@
-package com.shrimp.nd2d
+package com.shrimp.nd2d.utils
 {
 	import com.shrimp.framework.utils.StringUtil;
 

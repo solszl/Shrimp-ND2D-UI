@@ -1,11 +1,8 @@
 package com.shrimp.nd2d.ui.core
 {
-	import com.shrimp.nd2d.assets.AssetVisitor;
-	import com.shrimp.nd2d.constant.AssetType;
-	
 	import de.nulldesign.nd2d.display.Node2D;
 	import de.nulldesign.nd2d.display.Sprite2D;
-	import de.nulldesign.nd2d.materials.texture.Texture2D;
+	import de.nulldesign.nd2d.materials.Sprite2DMaterial;
 	
 	import flash.geom.Point;
 	import flash.utils.getQualifiedClassName;
@@ -15,7 +12,7 @@ package com.shrimp.nd2d.ui.core
 	 * @author Sol
 	 *
 	 */
-	public class Component extends Sprite2D
+	public class Component extends Node2D
 	{
 		/**	监听列表*/
 		protected var _listeners:Array;
@@ -55,6 +52,7 @@ package com.shrimp.nd2d.ui.core
 			this.y=ypos;
 		}
 
+		private var _mimicDisplayObject:Boolean;
 		/**	
 		 * 	<li>模拟传统显示列表</li><br/>
 		 * 	<li>注册点在左上角</li>
@@ -71,12 +69,30 @@ package com.shrimp.nd2d.ui.core
 			{
 				pivot = new Point();
 			}
+			_mimicDisplayObject = b;
+		}
+		
+		public function get mimicDisplayObject():Boolean
+		{
+			return _mimicDisplayObject;
 		}
 
 		public function setSize(w:Number, h:Number):void
 		{
 			width=w;
 			height=h;
+		}
+		
+		override public function set width(value:Number):void
+		{
+			_width = value;
+			super.width = value;
+		}
+		
+		override public function set height(value:Number):void
+		{
+			_height = value;
+			super.height = value;
 		}
 
 		/**复写添加监听的方法，将监听对象，类型， 函数注册到listeners中。方便集中管理，销毁*/
@@ -117,24 +133,51 @@ package com.shrimp.nd2d.ui.core
 		{
 			return getQualifiedClassName(this);
 		}
-		
-		protected function getTextureByName(name:String):Texture2D
+
+		public function get top():Object
 		{
-			var visitor:AssetVisitor = new AssetVisitor();
-			var tex:Texture2D;
-			if (AssetVisitor.has(name, AssetType.TEXTURE))
-			{
-				tex = visitor.retain(name, AssetType.TEXTURE);
-			}
-			else
-			{ 
-				throw new Error("can not find texture by image name:", name);
-			}
-			
-			visitor.destroy();
-			visitor = null;
-			
-			return tex;
+			return _top;
 		}
+
+		public function set top(value:Object):void
+		{
+			_top = value;
+		}
+
+		public function get bottom():Object
+		{
+			return _bottom;
+		}
+
+		public function set bottom(value:Object):void
+		{
+			_bottom = value;
+		}
+
+		public function get left():Object
+		{
+			return _left;
+		}
+
+		public function set left(value:Object):void
+		{
+			_left = value;
+		}
+
+		public function get right():Object
+		{
+			return _right;
+		}
+
+		public function set right(value:Object):void
+		{
+			_right = value;
+		}
+		
+		
+		private var _top:Object;
+		private var _bottom:Object;
+		private var _left:Object;
+		private var _right:Object;
 	}
 }

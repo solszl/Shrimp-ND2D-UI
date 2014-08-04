@@ -22,9 +22,8 @@ package com.shrimp.nd2d.ui.controls
 	 */	
 	public class Image extends Sprite2D
 	{
-		public function Image(parent:Node2D=null, xpos:Number=0, ypos:Number=0)
+		public function Image()
 		{
-//			super(parent,xpos,ypos);
 			super();
 		}
 		

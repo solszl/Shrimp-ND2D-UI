@@ -1,6 +1,6 @@
 package com.shrimp.nd2d.ui.core
 {
-	import com.shrimp.nd2d.ClassUtils;
+	import com.shrimp.nd2d.utils.ClassUtils;
 	
 	import flash.geom.Rectangle;
 	
